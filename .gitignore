@@ -1,0 +1,9 @@
+/vendor/
+/node_modules/
+/.idea/
+/composer.lock
+.vapor/
+.env.production
+.env.staging
+.env
+/public/mix-manifest.json
