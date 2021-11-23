@@ -21,7 +21,6 @@ services:
             - '.:/var/www/html'
         networks:
             - accutics
-            - untitled_sail
         depends_on:
             - mysql
     mysql:
@@ -46,8 +45,6 @@ services:
 networks:
     accutics:
         driver: bridge
-    untitled_sail:
-        external: true
 volumes:
     accutics:
         driver: local
