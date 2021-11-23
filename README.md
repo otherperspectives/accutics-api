@@ -9,33 +9,34 @@ This project consists of two APIs, one Laravel API and one Lumen Microservice fo
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow these steps in order to start the server without any issue.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+This API depends on the Lumen Microservice in order to fully work. 
+<br><br>
+After you have started the Users microservice, update the .env variable of this project, USERS_SERVICE_BASE_URL 
+with the IP of the container for Users. 
+
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/otherperspectives/accutics-api.git
    ```
-3. Install NPM packages
+2. Execute the necessary commands to start the server for the first time.
    ```sh
-   npm install
+    composer install
+    cp .env.example .env
+    php artisan key:generate
+    vendor/bin/sail up -d
+    vendor/bin/sail php artisan migrate:refresh --seed
    ```
-4. Enter your API in `config.js`
+3. Update in `.env` the variable `USERS_SERVICE_BASE_URL` with the IP of the container for users. The port must be :8001
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   USERS_SERVICE_BASE_URL=http://172.22.0.1:8001
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
