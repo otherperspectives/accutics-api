@@ -13,7 +13,7 @@ Follow these steps in order to start the server without any issue.
 
 ### Prerequisites
 
-This API depends on the Lumen Microservice in order to fully work. 
+This API depends on the [Lumen User Microservice](https://github.com/otherperspectives/accutics-users-microservice) in order to fully work. 
 <br><br>
 After you have started the Users microservice, update the .env variable of this project, USERS_SERVICE_BASE_URL 
 with the IP of the container for Users. 
@@ -49,4 +49,3 @@ with the IP of the container for Users.
 Please refer to the [Documentation](https://documenter.getpostman.com/view/4285739/UVJYLfDS#0a298a60-a885-4920-9eff-98f6ee08cb45)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
